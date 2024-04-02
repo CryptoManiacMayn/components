@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Side Nav Dark | Light</title>
 </head>
 <body>
 
     <div class="top-nav">
+        <h2 class="logo">Logo</h2>
+        <button class = "btnLogin-popup">Login</button>
 
       </div>
 
@@ -28,10 +31,12 @@
         </header>
         <div class="menu-bar">
             <div class="menu">
+                <ul>
                 <li class="search-box">
                     <i class='bx bxs-search-alt-2 icon'></i>
                         <input type="search" placeholder="Search">
                 </li>
+            </ul>
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="#">
@@ -51,21 +56,11 @@
                             <span class="text nav-text">Dashboard</span> 
                         </a>                           
                     </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-home-alt-2 icon' ></i>
-                            <span class="text nav-text">Dashboard</span> 
-                        </a>                           
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class='bx bxs-home-alt-2 icon' ></i>
-                            <span class="text nav-text">Dashboard</span> 
-                        </a>                           
-                    </li>
+
                 </ul>
             </div>
             <div class="bottom-content">
+                <ul>
                 <li class="">
                     <a href="#">
                         <i class='bx bx-log-out icon' ></i>
@@ -82,12 +77,42 @@
                         </div>
                     </li>                           
                 </li>
+            </ul>
             </div>
         </div>
     </nav>
     <script src="script.js"></script>
+    <script src="form.js"></script>
 <section class="home">
     <div class="text">Dashboard</div>
+
+    <div id="wrapper">
+        <form id="form-box login">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <div>
+                <input type="checkbox" id="remember-me" checked/>
+                <label for="remember-me">Remember Me</label>
+            </div>
+            <button type="submit">Login</button>
+            <p>or <a href="#" onclick="toggleForms()">register</a></p>
+        </form>
+        <form id="register-form">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+            <p>or <a href="#" onclick="toggleForms()">login</a></p>
+        </form>
+    </div>
 </section>
+
+
+
+
+
+
 </body>
 </html>
